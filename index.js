@@ -32,6 +32,17 @@ function readLine() {
 function gradingStudents(grades) {
     // Write your code here
     
+    const out = grades.map(g => 
+        {
+            let gr = Math.ceil(g / 5) * 5
+            if ((g>=40 || gr==40 )&& gr-g<=2){
+                return gr
+            } else {
+                return g
+            }
+        }
+    )
+    return out
 }
 
 function main() {
